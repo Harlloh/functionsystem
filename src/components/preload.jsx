@@ -1,10 +1,10 @@
 function Preload() {
     return ( 
         <div className="preeee">
-        <div class="containerssss" id="spinner">
-            <div class="loadingghgh"></div>
-            <div class="loadingghgh"></div>
-            <div class="loadingghgh"></div>
+        <div className="containerssss" id="spinner">
+            <div className="loadingghgh"></div>
+            <div className="loadingghgh"></div>
+            <div className="loadingghgh"></div>
             <small>Loading...</small>
         </div>
         </div>

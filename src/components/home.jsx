@@ -69,16 +69,6 @@ function Home() {
       setShouldAnimate(true);
     }, []);
   
-    const handleScroll = () =>{
-      const button = document.getElementById('herobutton');
-      if(window.scrollY >=10){
-          button.classList.add("animate")
-      }else{
-          button.classList.remove("animate")
-      } 
-    }
-    window.addEventListener('scroll', handleScroll);
-  
     return ( 
         <div>
             <section className="herosect">

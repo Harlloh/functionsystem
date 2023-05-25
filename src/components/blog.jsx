@@ -42,9 +42,9 @@ const Blog = () => {
           <NavLink className="overrr" to={post.url} key={post.url}>
             <li>
               {post.urlToImage && <img src={post.urlToImage} alt={post.title} />}
-              <a href={post.url} target="_blank" rel="noopener noreferrer">
+              <h3>
                 {post.title}
-              </a>
+              </h3>
             </li>
           </NavLink>
         ))}
