@@ -8,10 +8,8 @@ import {NavLink} from 'react-router-dom';
 const Blog = () => {
   const [blogPosts, setBlogPosts] = useState([]);
 
-  useEffect(() => {
     const fetchData = async () => {
       try {
-        const randomQuery = Math.random().toString(36).substring(7);
         const response = await axios.get(
           'https://newsapi.org/v2/everything',
           {
@@ -19,20 +17,16 @@ const Blog = () => {
               q: 'crypto',
               apiKey: 'ba86a3f42dc8447ea6906998d1494183',
               pageSize: 10,
-              randomQuery: randomQuery,
             },
           }
         );
-        const randomizedPosts = (response.data.articles);
-        setBlogPosts(randomizedPosts);
+        setBlogPosts(response.data.articles);
       } catch (error) {
         console.error('Error fetching blog posts:', error);
       }
     };
 
     fetchData();
-  }, []);
-
 
   return (
     <div className="container newsss">
