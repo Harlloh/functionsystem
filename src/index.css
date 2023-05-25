@@ -678,7 +678,7 @@ footer{
 
 @media screen and (max-width: 890px) {
   .objectives{
-    width: 90%;
+    width: 85%;
   }
   .ham{
     display: flex;
