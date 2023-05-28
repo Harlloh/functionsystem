@@ -677,6 +677,9 @@ footer{
 
 
 @media screen and (max-width: 890px) {
+  .adbs{
+    font-size: .81rem;
+  }
   .objectives{
     width: 85%;
   }
