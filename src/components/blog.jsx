@@ -4,17 +4,21 @@ import { NavLink } from 'react-router-dom';
 
 const Blog = () => {
   const [blogPosts, setBlogPosts] = useState([]);
-  // fetch('https://newsdata.io/api/1/news?apikey=pub_221745b3737ca9dd83968144054bcf7ed549b&q=crypto')
-  fetch('https://gnews.io/api/v4/search?q=crypto&lang=en&country=us&max=10&apikey=614497ccec25dcede986d69abd2fcdbf')
-  .then(res => res.json())
-  .then(data => {
-    // console.log(data.articles)
-    setBlogPosts(data.articles)
-  })
-  .catch(error => {
-    // enter your logic for when there is an error (ex. error toast)
-   console.log(error)
-  })
+
+  useEffect(() => {
+    const fetchBlogPosts = async () => {
+      try {
+        const response = await axios.get('https://gnews.io/api/v4/search?q=crypto&lang=en&country=us&max=10&apikey=614497ccec25dcede986d69abd2fcdbf');
+        setBlogPosts(response.data.articles);
+      } catch (error) {
+        console.log(error);
+        // Implement your error handling logic here
+      }
+    };
+
+    fetchBlogPosts();
+  }, []); // Empty dependency array to run the effect only once
+
   return (
     <div className="container newsss">
       <h2>Cryptocurrency News</h2>
@@ -22,7 +26,7 @@ const Blog = () => {
         {blogPosts.map((post) => (
           <NavLink href={post.url} key={post.url}>
             {post.image && <img src={post.image} alt={post.summary} />}
-            <p >{post.title}</p>
+            <h3 className='adbs'>{post.title}</h3>
           </NavLink>
         ))}
       </ul>
