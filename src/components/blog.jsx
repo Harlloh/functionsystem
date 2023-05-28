@@ -9,6 +9,7 @@ const Blog = () => {
     const fetchBlogPosts = async () => {
       try {
         const response = await axios.get('https://gnews.io/api/v4/search?q=crypto&lang=en&country=us&max=10&apikey=614497ccec25dcede986d69abd2fcdbf');
+        console.log(response.data.articles)
         setBlogPosts(response.data.articles);
       } catch (error) {
         console.log(error);
@@ -24,7 +25,7 @@ const Blog = () => {
       <h2>Cryptocurrency News</h2>
       <ul>
         {blogPosts.map((post) => (
-          <NavLink href={post.url} key={post.url}>
+          <NavLink to={post.url} key={post.url}>
             {post.image && <img src={post.image} alt={post.summary} />}
             <h3 className='adbs'>{post.title}</h3>
           </NavLink>
