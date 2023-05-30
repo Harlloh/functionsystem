@@ -6,7 +6,7 @@ import Blog from "./components/blog";
 import Services from "./components/services";
 import Contact from "./components/contact";
 import Icon from "./assets/icon.svg"
-import { FaBars, FaEnvelope, FaHamburger, FaInstagram, FaPhone, FaPhoneAlt, FaTelegram, FaTimes, FaTwitter, FaWhatsapp } from "react-icons/fa";
+import { FaBars, FaEnvelope, FaHamburger, FaInstagram, FaMapMarkerAlt, FaPhone, FaPhoneAlt, FaTelegram, FaTimes, FaTwitter, FaWhatsapp } from "react-icons/fa";
 import {HiMenuAlt3} from "react-icons/hi"
 import Cryptoservices from "./components/cryptoservices";
 import { useState } from "react";
@@ -75,10 +75,10 @@ const nav = document.getElementById('nav')
                         {/* <NavLink to="#"><span className="iconsocial"><FaTwitter  size={32} color="white"/></span></NavLink> */}
                     </div>
                     <cite>“The one who owns the information, owns the world!”</cite>
-                    {/* <NavLink className="contactMail" to="#">
-                        <FaPhoneAlt size={15} color="white"/>
-                        <p>+1 501-512-0642</p>
-                    </NavLink> */}
+                   <NavLink className="contactMail" to="#">
+                        <FaMapMarkerAlt size={15} color="white"/>
+                        <p>Outhoomphone Ban Nalaotay, Savannakhet, Laos</p>
+                    </NavLink>
                     <NavLink className="contactMail" to="mailto:Cyberkeelv_recovery@cyberservices.com">
                         <FaEnvelope size={15} color="white"/>
                         <p>Cyberkeelv_recovery@cyberservices.com</p>
