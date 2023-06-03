@@ -925,3 +925,83 @@ footer{
 .overrr:hover{
   transform: scale(1.021);
 }
+.testisect {
+  padding: 50px 0;
+}
+.car-container {
+  width: 100%;
+  max-width: 800px;
+  height: 220px;
+  position: relative;
+}
+
+.carousel {
+  border: 1px solid rgb(228, 30, 221);
+  border-radius: 10px;
+  width: 300px;
+  position: absolute;
+  color: white;
+  opacity: 0.5;
+  padding: 10px;
+  margin: 0 10px;
+  scroll-snap-align: center;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 1rem 0;
+}
+
+.carousel.active {
+  opacity: 1;
+}
+
+.carousel p {
+  margin-bottom: 10px;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+}
+
+.author img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.testitracker {
+  border: 2px solid red;
+}
+
+.tracar-container {
+  display: flex;
+  margin-top: 1rem;
+  gap: 0.51rem;
+}
+
+.carousell {
+  background-color: rgba(88, 83, 238, 0.538);
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+}
+
+.carousell.active {
+  background-color: rgb(83, 109, 238);
+}
+
+.testi-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btnsysy {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+

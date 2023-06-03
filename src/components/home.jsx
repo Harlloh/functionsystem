@@ -11,19 +11,60 @@ import Preload from "./preload";
 
 
 function Home() {
+    const testimonials = [
+        {
+            index: 1,
+            author: 'jack',
+            content:'i totally recommend Cyberkeelv hacking servies they are reliable ethical hackers, i was able to recover my lost bitcoin in an investment fraud',
+            location:'NY1',
+            img_url: "../assets/icon.svg",
+        },
+        {
+            index: 2,
+            author: 'jack',
+            content:'I had a great experience with Cyberkeelv hacking services. Their team of experts helped me regain access to my compromised account and secured it from further threats.',
+            location:'NY2',
+            img_url: "../assets/icon.svg",
+        },
+        {
+            index: 3,
+            author: 'jack',
+            content:'Thanks to Cyberkeelv, I recovered my stolen funds. They are highly professional and provided excellent customer support throughout the recovery process.',
+            location:'NY3',
+            img_url: "../assets/icon.svg",
+        },
+        {
+            index: 4,
+            author: 'jack',
+            content:'I highly recommend Cyberkeelv for their outstanding hacking services. They helped me recover important documents that were lost due to a security breach.  ',
+            location:'NY4',
+            img_url: "../assets/icon.svg",
+        },
+        {
+            index: 5,   
+            author: 'jack',
+            content:'Cyberkeelv is the best in the business! Their expertise in cryptocurrency recovery is unmatched. They successfully recovered my stolen coins from a scammer.',
+            location:'NY5',
+            img_url: "../assets/icon.svg",
+        },
+        {
+            index: 6,   
+            author: 'jack',
+            content:'Cyberkeelv is the best in the business! Their expertise in cryptocurrency recovery is unmatched. They successfully recovered my stolen coins from a scammer.',
+            location:'NY6',
+            img_url: "../assets/icon.svg",
+        },
+    ]
     const containerRef = useRef(null);
-    // const [loader, setLoader] =useState(true);
-    // const spinner = document.getElementById('spinner');
-    // if(spinner){
-    //     setTimeout(()=>{
-    //         spinner.style.display()
-    //         setLoader(false);
-    //     }, 1000)
-    // }
+    const [activeSlide, setActiveSlide] = useState(0)
 
-
-
-
+    const handlePrevslide = ()=>{
+        setActiveSlide(prevslide => prevslide === 0 ? testimonials.length - 1 : prevslide - 1)
+    }
+    const handleNextSlide = ()=>{
+        setActiveSlide(prevslide => prevslide ===  testimonials.length - 1 ? 0 : prevslide + 1)
+    }
+   
 
     const observer = new IntersectionObserver((entries)=>{
         entries.forEach((entry)=>{
@@ -36,32 +77,6 @@ function Home() {
     })
     const hiddenElement = document.querySelectorAll('.hidden');
     hiddenElement.forEach((el)=> observer.observe(el))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     const [shouldAnimate, setShouldAnimate] = useState(false);
 
@@ -133,6 +148,44 @@ function Home() {
                     </div>
                 </div>
             </section>  
+
+            <section className="testisect">
+                <div className="container testi-container">
+                    <p style={{color: 'white', textDecoration: 'underline'}}>TESTIMONIALS</p>
+                    <h2 style={{color: 'white'}}>What they say about us</h2>
+                    <div className="car-container">
+                        {testimonials.map((testimony,index) => {
+                            return(
+                                <div key={index} className={`carousel ${index === activeSlide ? 'active' : ''}`}>
+                                    <p>{testimony.content}</p>
+                                    <div className="author">
+                                        <img src={Icon} alt="" />
+                                        <span>
+                                            <p>{testimony.author}</p>
+                                            <p>{testimony.location}</p>
+                                        </span>
+                                    </div>
+                                </div>
+                             )
+                        })}
+                        
+                    </div>
+                    <div className="btnsysy">
+                        <button onClick={handleNextSlide}>next</button>
+                        <button onClick={handlePrevslide}>prev</button>
+                    </div>
+                    <div className="tracar-container">
+                        {testimonials.map((testimony,index) => {
+                            return(
+                                <div key={index} className={`carousell ${index === activeSlide ? 'active' : ''}`}>
+                                    
+                                </div>
+                             )
+                        })}
+                        
+                    </div>
+                </div>
+            </section>
         </div>
      );
 }
