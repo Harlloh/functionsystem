@@ -3,7 +3,7 @@ import Icon from "../assets/icon.svg"
 import weigh from "../assets/weigh.png"
 import { AiOutlineCheck } from 'react-icons/ai';
 
-import { FaCheck, FaCoins, FaFile, FaFileAlt, FaFileArchive } from "react-icons/fa";
+import { FaCheck, FaCoins, FaFile, FaFileAlt, FaFileArchive, FaUser } from "react-icons/fa";
 import { useState,useEffect } from "react";
 import { useRef } from "react";
 import Preload from "./preload";
@@ -13,48 +13,49 @@ import Preload from "./preload";
 function Home() {
     const testimonials = [
         {
-            index: 1,
-            author: 'jack',
-            content:'i totally recommend Cyberkeelv hacking servies they are reliable ethical hackers, i was able to recover my lost bitcoin in an investment fraud',
-            location:'NY1',
-            img_url: "../assets/icon.svg",
+          index: 1,
+          author: 'Jane Williams',
+          content: 'I totally recommend Cyberkeelv hacking services. They are reliable ethical hackers. I was able to recover my lost bitcoin in an investment fraud.',
+          location: 'London, UK',
+          img_url: '../assets/african-american-man-wearing-round-glasses.jpg',
         },
         {
-            index: 2,
-            author: 'jack',
-            content:'I had a great experience with Cyberkeelv hacking services. Their team of experts helped me regain access to my compromised account and secured it from further threats.',
-            location:'NY2',
-            img_url: "../assets/icon.svg",
+          index: 2,
+          author: 'Liam Johnson',
+          content: 'I had a great experience with Cyberkeelv hacking services. Their team of experts helped me regain access to my compromised account and secured it from further threats.',
+          location: 'Sydney, Australia',
+          img_url: '../assets/aiony-haust-3TLl_97HNJo-unsplash.jpg',
         },
         {
-            index: 3,
-            author: 'jack',
-            content:'Thanks to Cyberkeelv, I recovered my stolen funds. They are highly professional and provided excellent customer support throughout the recovery process.',
-            location:'NY3',
-            img_url: "../assets/icon.svg",
+          index: 3,
+          author: 'Sophia Martinez',
+          content: 'Thanks to Cyberkeelv, I recovered my stolen funds. They are highly professional and provided excellent customer support throughout the recovery process.',
+          location: 'Toronto, Canada',
+          img_url: 'https://example.com/sophia-martinez.jpg',
         },
         {
-            index: 4,
-            author: 'jack',
-            content:'I highly recommend Cyberkeelv for their outstanding hacking services. They helped me recover important documents that were lost due to a security breach.  ',
-            location:'NY4',
-            img_url: "../assets/icon.svg",
+          index: 4,
+          author: 'Noah Davis',
+          content: 'I highly recommend Cyberkeelv for their outstanding hacking services. They helped me recover important documents that were lost due to a security breach.',
+          location: 'Paris, France',
+          img_url: 'https://example.com/noah-davis.jpg',
         },
         {
-            index: 5,   
-            author: 'jack',
-            content:'Cyberkeelv is the best in the business! Their expertise in cryptocurrency recovery is unmatched. They successfully recovered my stolen coins from a scammer.',
-            location:'NY5',
-            img_url: "../assets/icon.svg",
+          index: 5,
+          author: 'Ava Wilson',
+          content: 'Cyberkeelv is the best in the business! Their expertise in cryptocurrency recovery is unmatched. They successfully recovered my stolen coins from a scammer.',
+          location: 'Tokyo, Japan',
+          img_url: 'https://example.com/ava-wilson.jpg',
         },
         {
-            index: 6,   
-            author: 'jack',
-            content:'Cyberkeelv is the best in the business! Their expertise in cryptocurrency recovery is unmatched. They successfully recovered my stolen coins from a scammer.',
-            location:'NY6',
-            img_url: "../assets/icon.svg",
+          index: 6,
+          author: 'Olivia Thompson',
+          content: 'Cyberkeelv is the best in the business! Their expertise in cryptocurrency recovery is unmatched. They successfully recovered my stolen coins from a scammer.',
+          location: 'New York, USA',
+          img_url: '../assets/aiony-haust-3TLl_97HNJo-unsplash.jpg',
         },
-    ]
+      ];
+      
     const containerRef = useRef(null);
     const [activeSlide, setActiveSlide] = useState(0)
 
@@ -159,7 +160,7 @@ function Home() {
                                 <div key={index} className={`carousel ${index === activeSlide ? 'active' : ''}`}>
                                     <p>{testimony.content}</p>
                                     <div className="author">
-                                        <img src={Icon} alt="" />
+                                        <FaUser className="img"/>
                                         <span>
                                             <p>{testimony.author}</p>
                                             <p>{testimony.location}</p>
@@ -171,8 +172,8 @@ function Home() {
                         
                     </div>
                     <div className="btnsysy">
-                        <button onClick={handleNextSlide}>next</button>
                         <button onClick={handlePrevslide}>prev</button>
+                        <button onClick={handleNextSlide}>next</button>
                     </div>
                     <div className="tracar-container">
                         {testimonials.map((testimony,index) => {
