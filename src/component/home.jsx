@@ -69,7 +69,7 @@ const Home = ()=>{
                     <div className="visions">
                         <div className="vision">
                             <div className="visionhead">
-                                <FaRegLightbulb className='visionicon' size='100px' color="rgb(1,0,26)"/>
+                                <FaRegLightbulb className='visionicon' size='100px' color="#87CEEB"/>
                                 <h4>01</h4>
                             </div>
                             <h1>Innovation and Technological Leadership</h1>
@@ -82,7 +82,7 @@ const Home = ()=>{
                         </div>
                         <div className="vision">
                             <div className="visionhead">
-                                <FaSmile className='visionicon' size='100px' color="rgb(1,0,26)"/>
+                                <FaSmile className='visionicon' size='100px' color="#87CEEB"/>
                                 <h4>02</h4>
                             </div>
                             <h1>Customer Success and Satisfaction</h1>
@@ -93,7 +93,7 @@ const Home = ()=>{
                         </div>
                         <div className="vision">
                             <div className="visionhead">
-                                <FaNetworkWired className='visionicon' size='100px' color="rgb(1,0,26)"/>
+                                <FaNetworkWired className='visionicon' size='100px' color="#87CEEB"/>
                                 <h4>03</h4>
                             </div>
                             <h1>Collaboration and Partnerships</h1>
@@ -103,7 +103,7 @@ const Home = ()=>{
                         </div>
                         <div className="vision">
                             <div className="visionhead">
-                                <FaSadCry className='visionicon' size='100px' color="rgb(1,0,26)"/>
+                                <FaSadCry className='visionicon' size='100px' color="#87CEEB"/>
                                     <h4>04</h4>
                                 </div>
                                 <h1>Sustainable Growth and Impact</h1>

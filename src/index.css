@@ -5,6 +5,9 @@ p{
   font-style: normal;
   font-weight: 400;
 }
+body{
+  overflow-x: hidden;
+}
 h1{
   font-family: 'Public Sans';
   font-style: normal;
