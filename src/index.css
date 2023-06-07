@@ -67,7 +67,8 @@ ul{
 }
 header{
   /* background: linear-gradient(100deg, #141313, #202020, #0e0d0d); */
-  background: linear-gradient(100deg, #a8adb0,#abbbc1,#98a6ab, #000000);
+  background-color: #333;
+  /* background: linear-gradient(100deg, #a8adb0,#abbbc1,#98a6ab, #000000); */
   box-shadow: 0 2px 10px #203A43;
   z-index: 2;
   position: sticky;
@@ -178,6 +179,7 @@ header{
   background-color: #c2185b;
 }
 .introduction{
+  background-color: #f8f8f8;
   padding: 5rem 0;
 }
 .introduction_content{
@@ -375,6 +377,59 @@ header{
 
 
 
+.contact-section {
+  background-color: #f5f5f5;
+  padding: 80px 0;
+}
+
+.contact-section .container {
+  text-align: center;
+}
+
+.contact-section h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.contact-section p {
+  color: #777;
+  margin-bottom: 40px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  gap: .51rem;
+  margin: 0 auto;
+}
+
+.contact-form .form-input {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.contact-form textarea {
+  height: 120px;
+}
+
+.contact-form button {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #555;
+}
 
 
 
@@ -586,7 +641,8 @@ header{
 }
 footer{
   padding: 5rem 0;
-  background: linear-gradient(100deg, #a8adb0,#abbbc1,#98a6ab, #000000);
+  /* background: linear-gradient(100deg, #a8adb0,#abbbc1,#98a6ab, #000000); */
+  background-color: #333
 
 }
 
@@ -1080,4 +1136,18 @@ footer{
   display: flex;
   gap: 1rem;
   margin-top: 1rem;
+}
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.footer .container {
+  text-align: center;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 14px;
 }

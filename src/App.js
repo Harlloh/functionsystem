@@ -51,7 +51,11 @@ const nav = document.getElementById('nav')
           <Routes>
             <Route path="/" element={<Home/>}/>
           </Routes>
-  
+          <footer className="footer">
+        <div className="container">
+          <p>&copy; 2023 Functionsystems. All rights reserved.</p>
+        </div>
+      </footer>
     </div>
     </BrowserRouter>
     

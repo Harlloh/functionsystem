@@ -214,6 +214,21 @@ const Home = ()=>{
                     </div>
                 </div>
             </section>
+
+            <section className="contact-section">
+                <div className="container">
+                <h2>Contact Us</h2>
+                <p>
+                    Have any questions or need assistance? Feel free to get in touch with us.
+                </p>
+                <form className="contact-form">
+                    <input className="form-input " type="text" placeholder="Name" />
+                    <input className="form-input " type="email" placeholder="Email" />
+                    <textarea className="form-input " placeholder="Message" rows="4"></textarea>
+                    <button type="submit" className="btn">Send Message <FaArrowRight /></button>
+                </form>
+                </div>
+            </section>
         </div>
     )
 }
