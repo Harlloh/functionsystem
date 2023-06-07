@@ -51,28 +51,7 @@ const nav = document.getElementById('nav')
           <Routes>
             <Route path="/" element={<Home/>}/>
           </Routes>
-          <footer id="about">
-                <div className="container footcontainer">
-                    <div className="socials">
-                        <NavLink to="https://wa.me/message/HXDJ43QLJAMAK1"><span className="iconsocial"><FaWhatsapp  size={32} color="white"/></span></NavLink>
-                        <NavLink to="https://t.me/+8562099234418"><span className="iconsocial"><FaTelegram  color="white" size={32}/></span></NavLink>
-                        <NavLink to="https://rb.gy/2xptg"><span className="iconsocial"><FaInstagram  size={32} color="white"/></span></NavLink>
-                        {/* <NavLink to="#"><span className="iconsocial"><FaTwitter  size={32} color="white"/></span></NavLink> */}
-                    </div>
-                    <cite>“The one who owns the information, owns the world!”</cite>
-                   <NavLink className="contactMail" to="#">
-                        <FaMapMarkerAlt size={15} color="white"/>
-                        <p>Outhoomphone Ban Nalaotay, Savannakhet, Laos</p>
-                    </NavLink>
-                    <NavLink className="contactMail" to="mailto:Cyberkeelv_recovery@cyberservices.com">
-                        <FaEnvelope size={15} color="white"/>
-                        <p>Cyberkeelv_recovery@cyberservices.com</p>
-                    </NavLink>
-                    <div className="copyright">
-                        <p>Cyberkeelv_recovery© Copyright 2023. All rights reserved</p>
-                    </div>
-                </div>
-          </footer>
+  
     </div>
     </BrowserRouter>
     
